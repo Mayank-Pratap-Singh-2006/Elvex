@@ -197,3 +197,38 @@ body {
   object-fit: cover;       
   display: block;                 
 }
+/* ===============================
+   DESKTOP / LAPTOP VIEW (NO WRAPPER)
+   =============================== */
+
+@media (min-width: 768px) {
+  body {
+    max-width: 420px;              /* mobile-like width */
+    margin: 0 auto;               /* center horizontally */
+    background-color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    min-height: 100vh;
+  }
+
+  html {
+    background-color: #f2f2f2;    /* side background */
+  }
+
+  /* Fix bottom nav alignment */
+  .nav_footer {
+    width: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Fix fixed headers (explore, etc.) */
+  .explore_header {
+    width: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .story_header {
+    width: 420px;
+  }
+}
