@@ -284,8 +284,8 @@ body {
   }
 
   #add_story_btn {
-    position: absolute;
-    left: 62px;
-    top: 65px;
+    position:absolute;
+    left:40%;
+    
   }
 }
