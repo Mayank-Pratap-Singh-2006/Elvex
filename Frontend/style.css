@@ -289,3 +289,11 @@ body {
     
   }
 }
+
+#back_btn_a{
+  height: 33px;
+  width: 33px;
+  border:2px black solid;
+  border-radius: 10px;
+}
+
