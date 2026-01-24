@@ -202,33 +202,90 @@ body {
    =============================== */
 
 @media (min-width: 768px) {
-  body {
-    max-width: 420px;              /* mobile-like width */
-    margin: 0 auto;               /* center horizontally */
-    background-color: white;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-    min-height: 100vh;
-  }
 
+  /* Base layout */
   html {
-    background-color: #f2f2f2;    /* side background */
+    background-color: #f2f2f2;
+    overflow-x: hidden;
   }
 
-  /* Fix bottom nav alignment */
-  .nav_footer {
-    width: 420px;
-    left: 50%;
-    transform: translateX(-50%);
+  body {
+    max-width: 420px;              /* Instagram-like width */
+    margin: 0 auto;
+    background-color: #ffffff;
+    min-height: 100vh;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    overflow-x: hidden;
   }
 
-  /* Fix fixed headers (explore, etc.) */
+  /* ===============================
+     FIXED HEADER ALIGNMENT
+     =============================== */
+
   .explore_header {
     width: 420px;
     left: 50%;
     transform: translateX(-50%);
+    box-sizing: border-box;
   }
+
+  /* ===============================
+     FIXED FOOTER ALIGNMENT
+     =============================== */
+
+  .nav_footer {
+    width: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+  }
+
+  .nav_footer img {
+    height: 38px;
+    width: 38px;
+    object-fit: contain;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  /* ===============================
+     STORY HEADER WIDTH FIX
+     =============================== */
 
   .story_header {
     width: 420px;
+    box-sizing: border-box;
+  }
+
+  /* ===============================
+     BUTTON & ICON FIXES
+     =============================== */
+
+  #interaction {
+    display: flex;
+    align-items: center;   /* FIXED typo */
+    margin-top: 5px;
+  }
+
+  #like_btn,
+  #comment_btn,
+  #share_btn {
+    height: 28px;
+    cursor: pointer;
+    padding: 4px;          /* better click area */
+  }
+
+  /* ===============================
+     ABSOLUTE BUTTON SAFETY FIX
+     =============================== */
+
+  #admin_story {
+    position: relative;    /* required for add button */
+  }
+
+  #add_story_btn {
+    position: absolute;
+    left: 62px;
+    top: 65px;
   }
 }
