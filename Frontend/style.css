@@ -1,3 +1,7 @@
+html{
+  height: 100%;
+  width:100%;
+}
 * {
   padding: 0;
   margin: 0;
@@ -295,4 +299,79 @@ body {
   width: 33px;
   border:2px black solid;
   border-radius: 10px;
+}
+/* messenger css */
+
+.messenger_header{
+  height: 120px;
+  border-bottom: 1px black solid;
+}
+#messenger_heading{
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+#messenger_logo{
+  height: 35px;
+  margin: 3px;
+}
+#search_chat_input{
+  height: 37px;
+  width: 88%;
+  border: 3px rgb(61, 72, 75) solid;
+  border-radius: 10px;
+  padding: 4px;
+  margin-right: 3px;
+  font-size: medium;
+  font-weight: 600;
+}
+.search_div{
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#messenger_heading span{
+font-weight: bolder;
+font-size: larger;
+}
+.chat_box{
+  height: 90px;
+  width: 98%;
+  border: 1px black solid;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+#chat_profile{
+  height:65px ;
+  width: 65px;
+  border: 1px black solid;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left:7px;
+  margin-right:15px;
+}
+#chat_profile img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#chat_username{
+  font-size: larger;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+#chat_activity{
+  font-family: 'Courier New', Courier, monospace;
+}
+.chat_content{
+  height: 90px;
+}
+
+#cross_btn{
+  height: 37px;
+  width: 37px;
 }
