@@ -93,22 +93,22 @@ body {
   display: block;
 }
 #interaction {
-  height: 30px;
+  height: 35px;
   display: flex;
   align-items: centers;
   margin-top: 5px;
 }
 #like_btn {
-  margin-left: 5px;
-  margin-right: 5px;
-  height: 28px;
+  margin-left: 7px;
+  margin-right: 7px;
+  height: 32px;
 }
 #comment_btn {
-  margin-right: 5px;
-  height: 28px;
+  margin-right: 7px;
+  height: 32px;
 }
 #share_btn {
-  height: 30px;
+  height: 34px;
 }
 #caption_area {
   padding: 3px;
