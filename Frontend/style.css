@@ -56,10 +56,10 @@ body {
 }
 .post_window {
   height: 550px;
-  border-bottom: 1px black solid;
-  border-top: 1px black solid;
-  border-radius: 2px;
-  margin-bottom: 3px;
+  width: 98%;
+  margin:3px;
+  border: 1px black solid;
+  border-radius: 10px;
 }
 .pw_header {
   height: 57px;
