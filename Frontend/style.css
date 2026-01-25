@@ -9,6 +9,8 @@ html{
 }
 body {
   padding-bottom: 60px;
+  height: 100%;
+  width: 100%;
 }
 
 .story_header {
@@ -376,3 +378,81 @@ font-size: larger;
   width: 37px;
 }
 
+.profile_header{
+  height: 50px;
+  border-bottom: 1px black solid;
+  display: flex;
+  align-items: centers;
+
+}
+#menu_icon{
+  padding:2px;
+  height:42px;
+  width: 42px;
+  overflow: hidden;
+
+}
+#menu_icon img{
+  height: 100%;
+  width: 100%;
+  object-fit: covers;
+}
+#admin_profile_pic{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 1px black solid;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+#inner_circle_app{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 1px black solid;
+  overflow: hidden;
+}
+#inner_circle_app img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.admin_details{
+  height: 300px;
+  border-bottom: 1px black solid;
+
+}
+#admin_name{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.app_div{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.social_numbers{
+   height: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  
+}
+#followers_div,#posts_div,#following_div{
+  width:33% ;
+  margin: 5px;
+}
+#flrd_heading,#pd_heading,#flld_heading,#flr_num,#posts_num,#fll_num{
+  text-align: center;
+  margin: 5px;
+  font-weight: 600;
+}
+.bio_area{
+  height: 100px;
+  padding: 5px;
+}
