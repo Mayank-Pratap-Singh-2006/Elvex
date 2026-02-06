@@ -1,88 +1,82 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elvex·Profile</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/elvex.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <header class="profile_header">
-      <div id="menu_icon"><img src="assets/menu_icon.png" /></div>
-    </header>
-    <main>
-      <div class="admin_details">
-        <div class="app_div">
-          <div id="admin_profile_pic">
-            <div id="inner_circle_app">
-              <img src="assets/profile_default_pic.png" />
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elvex·Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+  <link rel="icon" href="assets/elvex.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="profile_header">
+    <button id="menu_icon">
+      <img src="assets/menu_icon.png" alt="menu" />
+    </button>
+  </header>
+
+  <!-- ===== MAIN PROFILE ===== -->
+  <main class="profile_main">
+    <div class="admin_details">
+
+      <!-- Profile Picture -->
+      <div class="profile_pic_container">
+        <div id="inner_circle_app">
+          <img id="profile_pic_img" src="assets/profile_default_pic.png" alt="profile pic" />
         </div>
-        <div id="admin_name">Admin Name</div>
-        <div class="social_numbers">
-            <div id="followers_div">
-                <div id="flrd_heading">Followers</div>
-                <div id="flr_num">13</div>
-            </div>
-            <div id="posts_div">
-                <div id="pd_heading">Posts</div>
-                <div id="posts_num">4</div>
-            </div>
-            <div id="following_div">
-                <div id="flld_heading">Following</div>
-                <div id="fll_num">10</div>
-            </div>
+        <!-- Online dot for dynamic status -->
+        <div class="online_dot"></div>
+      </div>
+
+      <!-- Admin Name -->
+      <div id="admin_name">Admin Name</div>
+
+      <!-- Followers / Posts / Following -->
+      <div class="social_numbers">
+        <div class="social_item" id="followers_div">
+          <div class="social_heading">Followers</div>
+          <div class="social_number" id="followers_count">0</div>
         </div>
-        <div class="bio_area">
-            <p>bio....</p>
-            <p>....</p>
-            <p>....</p>
-            <p>....</p>
+        <div class="social_item" id="posts_div">
+          <div class="social_heading">Posts</div>
+          <div class="social_number" id="posts_count">0</div>
+        </div>
+        <div class="social_item" id="following_div">
+          <div class="social_heading">Following</div>
+          <div class="social_number" id="following_count">0</div>
         </div>
       </div>
-      <div class="explore_grid">
-        <div class="grid_item">
-          <img src="https://picsum.photos/500?random=1" />
-        </div>
-        <div class="grid_item">
-          <img src="https://picsum.photos/500?random=2" />
-        </div>
-        <div class="grid_item">
-          <img src="https://picsum.photos/500?random=3" />
-        </div>
-        <div class="grid_item">
-          <img src="https://picsum.photos/500?random=4" />
-        </div>
+
+      <!-- Bio Area -->
+      <div class="bio_area" id="bio_area">
+        <p>Bio line 1...</p>
+        <p>Bio line 2...</p>
       </div>
-    </main>
-    <footer>
-      <div class="nav_footer">
-        <a href="index.html"
-          ><img src="assets/home_icon.png" alt="home" id="home_btn"
-        /></a>
-        <a href="explore.html"
-          ><img
-            src="assets/explore_icon.png"
-            alt="explore_icon"
-            id="explore_btn"
-        /></a>
-        <a href="addpost.html"
-          ><img src="assets/add_icon.png" alt="add_icon" id="add_btn"
-        /></a>
-        <a href="messenger.html"
-          ><img
-            src="assets/messenger_icon.png"
-            alt="messenger_icon"
-            id="messenger_btn"
-        /></a>
-        <a href="profile.html"
-          ><div id="profile_nav">
-            <img src="assets/profile_default_pic.png" />
-          </div>
-        </a>
-      </div>
-    </footer>
-  </body>
+    </div>
+
+    <!-- ===== GRID POSTS ===== -->
+    <div class="explore_grid" id="profile_posts">
+      <!-- Posts will be rendered here dynamically -->
+      <!-- Example static placeholder -->
+      <div class="grid_item"><img src="https://picsum.photos/500?random=1" alt="post" /></div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER NAV ===== -->
+  <footer>
+    <div class="nav_footer">
+      <a href="index.html"><img src="assets/home_icon.png" alt="home" /></a>
+      <a href="explore.html"><img src="assets/explore_icon.png" alt="explore" /></a>
+      <a href="addpost.html"><img src="assets/add_icon.png" alt="add" /></a>
+      <a href="messenger.html"><img src="assets/messenger_icon.png" alt="messenger" /></a>
+      <a href="profile.html">
+        <div id="profile_nav"><img src="assets/profile_default_pic.png" alt="profile" /></div>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Optional JS for later dynamic rendering -->
+  <script src="profile.js"></script>
+</body>
 </html>

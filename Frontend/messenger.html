@@ -1,48 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elvex·Messenger</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/elvex.ico" type="image/x-icon">
-</head>
-<body>
+
+    <link rel="stylesheet" href="messenger.css" />
+    <link rel="icon" href="assets/elvex.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- ===== HEADER ===== -->
     <header class="messenger_header">
-        <div id="messenger_heading"><img src="assets/messenger_icon.png" alt="messenger_icon" id="messenger_logo"><span>Messenger</span></div>
-        <div class="search_div"><input type="text" placeholder="Search chats " id="search_chat_input" /><img src="assets/cross_icon.png" alt="" id="cross_btn"></div>
+      <div class="messenger_top">
+        <div class="messenger_title">
+          <img
+            src="assets/messenger_icon.png"
+            alt="messenger"
+            id="messenger_logo"
+          />
+          <span>Messenger</span>
+        </div>
+
+        <div class="messenger_actions">
+          <button class="icon_btn" id="new_chat_btn">
+            <img src="assets/add_icon.png" alt="new chat" />
+          </button>
+        </div>
+      </div>
+
+      <div class="messenger_search">
+        <input
+          type="text"
+          id="search_chat_input"
+          placeholder="Search chats"
+          autocomplete="off"
+        />
+
+        <button class="icon_btn" id="clear_search_btn">
+          <img src="assets/cross_icon.png" alt="clear search" />
+        </button>
+      </div>
     </header>
-    <main>
-        <div class="chat_box"> 
-            <div id="chat_profile"><img src="https://picsum.photos/500?random=30"></div>
-            <div class="chat_content">
-                <div id="chat_username">Username 1</div>
-            <div id="Last_activity">Last Activity</div>
-            </div>
+
+    <!-- ===== MAIN ===== -->
+    <main class="messenger_main">
+      <!-- Single chat template (later cloned dynamically by JS) -->
+      <div class="chat_box">
+        <div class="chat_profile">
+          <div class="profile_circle">
+            <img
+              src="https://picsum.photos/500?random=30"
+              alt="profile"
+              class="chat_profile_img"
+            />
+          </div>
+
+          <div class="online_dot"></div>
         </div>
-        <div class="chat_box"> 
-            <div id="chat_profile"><img src="https://picsum.photos/500?random=31"></div>
-            <div class="chat_content">
-                <div id="chat_username">Username 2</div>
-            <div id="Last_activity">Last Activity</div>
+
+        <div class="chat_content">
+          <div class="chat_top_row">
+            <div class="chat_username_area">
+              <span class="chat_username">Username</span>
+
+              <span class="verified_badge"> </span>
             </div>
-        </div>
-        <div class="chat_box"> 
-            <div id="chat_profile"><img src="https://picsum.photos/500?random=32"></div>
-            <div class="chat_content">
-                <div id="chat_username">Username 3</div>
-            <div id="Last_activity">Last Activity</div>
+
+            <div class="chat_time">2m</div>
+          </div>
+
+          <div class="chat_bottom_row">
+            <div class="chat_last_msg_area">
+              <span class="message_status"> </span>
+
+              <span class="last_message">Last message preview...</span>
             </div>
+
+            <div class="chat_right_area">
+              <span class="unread_badge">3</span>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
+
+    <!-- ===== FOOTER NAV ===== -->
     <footer>
-    <div class="nav_footer">
-        <a href="index.html"><img src="assets/home_icon.png" alt="home" id="home_btn"></a>
-        <a href="explore.html"><img src="assets/explore_icon.png" alt="explore_icon" id="explore_btn"></a>
-        <a href="addpost.html"><img src="assets/add_icon.png" alt="add_icon" id="add_btn"></a>
-        <a href="messenger.html"><img src="assets/messenger_icon.png" alt="messenger_icon" id="messenger_btn"></a>
-        <a href="profile.html"><div id="profile_nav"><img src="assets/profile_default_pic.png" ></div> </a>       
-    </div>
-</footer>
-</body>
+      <div class="nav_footer">
+        <a href="index.html">
+          <img src="assets/home_icon.png" alt="home" id="home_btn" />
+        </a>
+
+        <a href="explore.html">
+          <img src="assets/explore_icon.png" alt="explore" id="explore_btn" />
+        </a>
+
+        <a href="addpost.html">
+          <img src="assets/add_icon.png" alt="add post" id="add_btn" />
+        </a>
+
+        <a href="messenger.html">
+          <img
+            src="assets/messenger_icon.png"
+            alt="messenger"
+            id="messenger_btn"
+          />
+        </a>
+
+        <a href="profile.html">
+          <div id="profile_nav">
+            <img src="assets/profile_default_pic.png" alt="profile" />
+          </div>
+        </a>
+      </div>
+    </footer>
+  </body>
 </html>

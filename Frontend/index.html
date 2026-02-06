@@ -4,143 +4,139 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elvex</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <link rel="icon" href="assets/elvex.ico" type="image/x-icon" />
   </head>
+
   <body>
+    <!-- ================= HEADER (STORIES BAR) ================= -->
     <header>
       <div class="story_header">
+        <!-- Admin story -->
         <div id="admin_story">
           <div id="inner_circle_as">
-            <img src="assets/profile_default_pic.png" />
+            <img src="assets/profile_default_pic.png" alt="admin story" />
+          </div>
+
+          <!-- Add story button -->
+          <img
+            src="assets/addstory_icon.png"
+            id="add_story_btn"
+            alt="add story"
+          />
+        </div>
+
+        <!-- Other story (later: multiple stories will be created using JS) -->
+        <div id="other_story">
+          <div id="inner_circle_os">
+            <img src="https://picsum.photos/200?random=10" alt="story" />
           </div>
         </div>
-        <div id="other_story">
-          <div id="inner_circle_os"></div>
-        </div>
-        <img src="assets/addstory_icon.png" id="add_story_btn" />
       </div>
     </header>
+
+    <!-- ================= MAIN FEED AREA ================= -->
     <main>
+      <!-- One post template (later: JS will clone / generate many posts) -->
       <div class="post_window">
+        <!-- Post header -->
         <div class="pw_header">
           <div id="profile_pic">
-            <img src="https://picsum.photos/500?random=25" />
+            <img src="https://picsum.photos/500?random=25" alt="profile pic" />
           </div>
-          <div>Anne</div>
+
+          <div class="post_user_info">
+            <div class="post_username">Anne</div>
+            <div class="post_location">New York, USA</div>
+          </div>
+
+          <div class="post_menu">
+            <span class="three_dots">⋮</span>
+          </div>
         </div>
+
+        <!-- Post image/content -->
         <div class="pw_main" id="post_content">
-          <img src="https://picsum.photos/500?random=24" alt="" />
+          <img src="https://picsum.photos/500?random=24" alt="post image" />
+
+          <!-- Heart animation (JS will show on double tap) -->
+          <div class="heart_overlay"></div>
         </div>
+
+        <!-- Post footer -->
         <div class="pw_footer">
+          <!-- Interaction buttons -->
           <div id="interaction">
-            <img src="assets/like_icon.png" id="like_btn" />
-            <img src="assets/comment_icon.png" id="comment_btn" />
-            <img src="assets/share_icon.png" id="share_btn" />
+            <div class="left_interaction">
+              <img src="assets/like_icon.png" id="like_btn" alt="like" />
+              <img src="assets/comment_icon.png" id="comment_btn" alt="comment" />
+              <img src="assets/share_icon.png" id="share_btn" alt="share" />
+            </div>
+
+            <div class="right_interaction">
+             
+            </div>
           </div>
-          <div id="caption_area">This is caption</div>
-        </div>
-      </div>
-      <div class="post_window">
-        <div class="pw_header">
-          <div id="profile_pic">
-            <img src="https://picsum.photos/500?random=50" />
+
+          <!-- Likes count -->
+          <div class="like_count_area">
+            Liked by <b>alex</b> and <b>1,203 others</b>
           </div>
-          <div>elly_skeva</div>
-        </div>
-        <div class="pw_main" id="post_content">
-          <img src="https://picsum.photos/500?random=49" alt="" />
-        </div>
-        <div class="pw_footer">
-          <div id="interaction">
-            <img src="assets/like_icon.png" id="like_btn" />
-            <img src="assets/comment_icon.png" id="comment_btn" />
-            <img src="assets/share_icon.png" id="share_btn" />
+
+          <!-- Caption -->
+          <div id="caption_area">
+            <b>Anne</b> This is caption <span class="hashtags">#travel #life</span>
           </div>
-          <div id="caption_area">This is caption</div>
-        </div>
-      </div>
-      <div class="post_window">
-        <div class="pw_header">
-          <div id="profile_pic">
-            <img src="https://picsum.photos/500?random=48" />
+
+          <!-- Comment preview -->
+          <div class="comment_preview">
+            <div class="view_comments">View all 128 comments</div>
+            <div><b>martin</b> Nice photo 🔥</div>
+            <div><b>lucy</b> Amazing ✨</div>
           </div>
-          <div>martin</div>
-        </div>
-        <div class="pw_main" id="post_content">
-          <img src="https://picsum.photos/500?random=47" alt="" />
-        </div>
-        <div class="pw_footer">
-          <div id="interaction">
-            <img src="assets/like_icon.png" id="like_btn" />
-            <img src="assets/comment_icon.png" id="comment_btn" />
-            <img src="assets/share_icon.png" id="share_btn" />
+
+          <!-- Add comment input -->
+          <div class="add_comment_area">
+            <input
+              type="text"
+              class="comment_input"
+              placeholder="Add a comment..."
+            />
+            <button class="post_comment_btn">Post</button>
           </div>
-          <div id="caption_area">This is caption</div>
-        </div>
-      </div>
-      <div class="post_window">
-        <div class="pw_header">
-          <div id="profile_pic">
-            <img src="https://picsum.photos/500?random=45" />
-          </div>
-          <div>stivia</div>
-        </div>
-        <div class="pw_main" id="post_content">
-          <img src="https://picsum.photos/500?random=43" alt="" />
-        </div>
-        <div class="pw_footer">
-          <div id="interaction">
-            <img src="assets/like_icon.png" id="like_btn" />
-            <img src="assets/comment_icon.png" id="comment_btn" />
-            <img src="assets/share_icon.png" id="share_btn" />
-          </div>
-          <div id="caption_area">This is caption</div>
-        </div>
-      </div>
-      <div class="post_window">
-        <div class="pw_header">
-          <div id="profile_pic">
-            <img src="https://picsum.photos/500?random=40" />
-          </div>
-          <div>lucy</div>
-        </div>
-        <div class="pw_main" id="post_content">
-          <img src="https://picsum.photos/500?random=39" alt="" />
-        </div>
-        <div class="pw_footer">
-          <div id="interaction">
-            <img src="assets/like_icon.png" id="like_btn" />
-            <img src="assets/comment_icon.png" id="comment_btn" />
-            <img src="assets/share_icon.png" id="share_btn" />
-          </div>
-          <div id="caption_area">This is caption</div>
+
+          <!-- Post timestamp -->
+          <div class="post_time">2 HOURS AGO</div>
         </div>
       </div>
     </main>
+
+    <!-- ================= FOOTER (BOTTOM NAVIGATION) ================= -->
     <footer>
       <div class="nav_footer">
-        <a href="index.html"
-          ><img src="assets/home_icon.png" alt="home" id="home_btn"
-        /></a>
-        <a href="explore.html"
-          ><img
-            src="assets/explore_icon.png"
-            alt="explore_icon"
-            id="explore_btn"
-        /></a>
-        <a href="addpost.html"
-          ><img src="assets/add_icon.png" alt="add_icon" id="add_btn"
-        /></a>
-        <a href="messenger.html"
-          ><img
+        <a href="index.html">
+          <img src="assets/home_icon.png" alt="home" id="home_btn" />
+        </a>
+
+        <a href="explore.html">
+          <img src="assets/explore_icon.png" alt="explore" id="explore_btn" />
+        </a>
+
+        <a href="addpost.html">
+          <img src="assets/add_icon.png" alt="add post" id="add_btn" />
+        </a>
+
+        <a href="messenger.html">
+          <img
             src="assets/messenger_icon.png"
-            alt="messenger_icon"
+            alt="messenger"
             id="messenger_btn"
-        /></a>
-        <a href="profile.html"
-          ><div id="profile_nav">
-            <img src="assets/profile_default_pic.png" />
+          />
+        </a>
+
+        <a href="profile.html">
+          <div id="profile_nav">
+            <img src="assets/profile_default_pic.png" alt="profile" />
           </div>
         </a>
       </div>

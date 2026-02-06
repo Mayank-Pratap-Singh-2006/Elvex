@@ -1,0 +1,274 @@
+/* ========== RESET + BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  color: #111;
+  overflow-x: hidden;
+  padding-bottom: 90px; /* space for fixed nav */
+}
+
+/* ========== HEADER ====== */
+.profile_header {
+  width: 100%;
+  height: 56px;
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+#menu_icon {
+  height: 36px;
+  width: 36px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#menu_icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ========== MAIN PROFILE AREA ====== */
+.profile_main {
+  padding: 14px 12px 12px 12px;
+}
+
+/* Profile Pic + Online Dot */
+.profile_pic_container {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 12px auto;
+}
+
+#inner_circle_app {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(0,0,0,0.15);
+  background: #f2f2f2;
+}
+
+#profile_pic_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Online Dot */
+.online_dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #19c37d; /* green online */
+  border: 3px solid white;
+  box-shadow: 0 0 2px rgba(0,0,0,0.25);
+}
+
+/* Admin Name */
+#admin_name {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+/* Followers / Posts / Following */
+.social_numbers {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 14px;
+}
+
+.social_item {
+  text-align: center;
+}
+
+.social_heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0,0,0,0.65);
+}
+
+.social_number {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111;
+  margin-top: 4px;
+}
+
+/* Bio Area */
+.bio_area {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* Grid Posts */
+.explore_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.grid_item {
+  width: 100%;
+  aspect-ratio: 1/1; /* square items */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eaeaea;
+}
+
+.grid_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.grid_item img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== BOTTOM NAV ========== */
+.nav_footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 62px;
+
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.nav_footer a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_footer img {
+  height: 38px;
+  width: 38px;
+  object-fit: contain;
+  display: block;
+}
+
+#profile_nav {
+  height: 42px;
+  width: 42px;
+
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+}
+
+#profile_nav img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========== DESKTOP CENTER ========== */
+@media (min-width: 768px) {
+  body {
+    max-width: 440px;
+    margin: 0 auto;
+
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .nav_footer {
+    max-width: 440px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .story_header {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+
+/* ========== SMALL SCREEN SAFETY ====== */
+@media (max-width: 360px) {
+  .grid_item {
+    gap: 2px;
+  }
+
+  #admin_name {
+    font-size: 18px;
+  }
+
+  .social_number {
+    font-size: 14px;
+  }
+
+  .social_heading {
+    font-size: 12px;
+  }
+}
+/* ========== SMALL SCREEN SAFETY ========== */
+@media (max-width: 360px) {
+  .pw_main {
+    height: 330px;
+  }
+
+  #like_btn,
+  #comment_btn,
+  #share_btn,
+  #save_btn {
+    height: 30px;
+    width: 30px;
+  }
+
+  .nav_footer img {
+    height: 34px;
+    width: 34px;
+  }
+  #save_btn {
+    height: 25px;
+    width: 32px;
+  }
+}
